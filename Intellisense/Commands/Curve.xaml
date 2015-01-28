@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="OpenBVESyntax.CurveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <StackPanel Name="Description">
+        <TextBlock><Bold>Changes the curve radius for the player's rail as follows:</Bold></TextBlock>
+        <WrapPanel>
+            <TextBlock>.curve</TextBlock>
+            <TextBlock Foreground="Red"> Radius</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="Orange">Cant</TextBlock>
+        </WrapPanel>
+        <TextBlock></TextBlock>
+        <WrapPanel>
+            <TextBlock Foreground="Red">Radius</TextBlock>
+            <TextBlock> represents the curve radius in meters from ths point onwards. Positive numbers curve RIGHT and negative numbers curve LEFT</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="Orange">Cant</TextBlock>
+            <TextBlock> represents the cant (superelevation) in millimeters from this point onwards</TextBlock>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>
