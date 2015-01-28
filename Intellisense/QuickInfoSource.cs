@@ -63,56 +63,47 @@ namespace OpenBVESyntax
                 var tagSpan = curTag.Span.GetSpans(_buffer).First();
                 switch (curTag.Tag.type)
                 {
-                    case commandTypes.RailType:
-                        
-                    applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                    quickInfoContent.Add(new RailTypeControl() );
-                        break;
-                    case commandTypes.Rail:
-                    applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                    quickInfoContent.Add(new RailControl());
-                        break;
-                    case commandTypes.RailStart:
-                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add(new RailStartControl() );
-                        break;
+                        //Primary Command Types
+                        //Alphabetical Order
                     case commandTypes.Curve:
                         applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add(new CurveControl() );
-                        break;
-                    case commandTypes.Pitch:
-                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add("Changes the pitch for the player's rail as follows:" + Environment.NewLine +
-                                             ".pitch Rate" + Environment.NewLine +
-                                             "Rate represents the pitch of the track in thousands. Positive numbers pitch UP and negative numbers pitch DOWN");
-                        break;
-                    case commandTypes.FreeObject:
-                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add("Places a FreeObject as follows:" + Environment.NewLine +
-                                             ".freeobj RailIndex;FreeObjStructureIndex;X;Y;Yaw;Pitch;Roll" + Environment.NewLine +
-                                             "RailIndex represents the rail on which the new object is to be placed" + Environment.NewLine +
-                                             "FreeObjStructureIndex is a non-negative integer representing the FreeObject to be placed" + Environment.NewLine +
-                                             "X represents the horizontal position relative to the rail for the new FreeObject" + Environment.NewLine +
-                                             "Y represents the vertical position relative to the rail for the new FreeObject" + Environment.NewLine +
-                                             "Yaw represents the angle in degrees by which the object is rotated in the XZ-plane in clock-wise order when viewed from above" + Environment.NewLine +
-                                             "Pitch represents the angle in degrees by which the object is rotated in the YZ-plane in clock-wise order when viewed from the left" + Environment.NewLine +
-                                             "Roll represents the angle in degrees by which the object is rotated in the XY-plane in clock-wise order when viewed from behind");
-                        break;
-                    case commandTypes.Wall:
-                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add("Starts or changes a Wall as follows:" + Environment.NewLine +
-                                             ".freeobj RailIndex;WallSide;WallIndex" + Environment.NewLine +
-                                             "RailIndex represents the rail on which the wall is to be started" + Environment.NewLine +
-                                             "WallSide is an integer representing the side on which the wall is to be placed- -1 for left, 0 for both sides and 1 for right" + Environment.NewLine +
-                                             "WallIndex is a non-negative integer representing the WallType to use");
+                        quickInfoContent.Add(new CurveControl());
                         break;
                     case commandTypes.Dike:
                         applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
-                        quickInfoContent.Add("Starts or changes a Dike as follows:" + Environment.NewLine +
-                                             ".freeobj RailIndex;DikeSide;DikeIndex" + Environment.NewLine +
-                                             "RailIndex represents the rail on which the dike is to be started" + Environment.NewLine +
-                                             "WallSide is an integer representing the side on which the dike is to be placed- -1 for left, 0 for both sides and 1 for right" + Environment.NewLine +
-                                             "WallIndex is a non-negative integer representing the DikeType to use");
+                        quickInfoContent.Add(new DikeControl() );
+                        break;
+                    case commandTypes.DikeEnd:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new DikeEndControl());
+                        break;
+                    case commandTypes.Pitch:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new PitchControl());
+                        break;
+                    case commandTypes.FreeObject:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new FreeObjControl());
+                        break;
+                    case commandTypes.Rail:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new RailControl());
+                        break;
+                    case commandTypes.RailStart:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new RailStartControl());
+                        break;
+                    case commandTypes.RailType:       
+                    applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                    quickInfoContent.Add(new RailTypeControl() );
+                        break;
+                    case commandTypes.Wall:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new WallControl() );
+                        break;
+                    case commandTypes.WallEnd:
+                        applicableToSpan = _buffer.CurrentSnapshot.CreateTrackingSpan(tagSpan, SpanTrackingMode.EdgeExclusive);
+                        quickInfoContent.Add(new WallEndControl());
                         break;
                 }
             }

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="OpenBVESyntax.WallControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <StackPanel Name="Description">
+        <TextBlock><Bold>Starts or changes a Wall as follows:</Bold></TextBlock>
+        <WrapPanel>
+            <TextBlock>.wall</TextBlock>
+            <TextBlock Foreground="Red"> RailIndex</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="Orange">WallSide</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="YellowGreen">WallIndex</TextBlock>
+        </WrapPanel>
+        <TextBlock></TextBlock>
+        <WrapPanel>
+            <TextBlock Foreground="Red">RailIndex</TextBlock>
+            <TextBlock> is a non-negative integer, representing the selected rail</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="Orange">WallSide</TextBlock>
+            <TextBlock> is an integer representing the side on which the Wall is to be placed: <Bold>-1</Bold> for left <Bold>0</Bold> for both sides and <Bold>1</Bold> for right</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="YellowGreen">WallIndex</TextBlock>
+            <TextBlock> is a non-negative integer representing the new WallType from this position</TextBlock>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>

@@ -61,8 +61,22 @@ namespace OpenBVESyntax
         /// Defines the "ordinary" classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
+        [Name("wallend")]
+        internal static ClassificationTypeDefinition WallEnd = null;
+
+        /// <summary>
+        /// Defines the "ordinary" classification type.
+        /// </summary>
+        [Export(typeof(ClassificationTypeDefinition))]
         [Name("dike")]
         internal static ClassificationTypeDefinition Dike = null;
+
+        /// <summary>
+        /// Defines the "ordinary" classification type.
+        /// </summary>
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name("dikeend")]
+        internal static ClassificationTypeDefinition DikeEnd = null;
 
         #endregion
     }

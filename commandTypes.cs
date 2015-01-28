@@ -7,6 +7,6 @@ namespace OpenBVESyntax
 {
     public enum commandTypes
     {
-       RailType, Rail, RailStart, Curve, Pitch, FreeObject, Wall, Dike
+       RailType, Rail, RailStart, Curve, Pitch, FreeObject, Wall, WallEnd, Dike, DikeEnd
     }
 }

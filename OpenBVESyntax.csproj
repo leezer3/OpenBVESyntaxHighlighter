@@ -96,8 +96,26 @@
   <ItemGroup>
     <Compile Include="Classification\ClassificationFormat.cs" />
     <Compile Include="Classification\ClassificationType.cs" />
+    <Compile Include="Intellisense\Commands\WallEnd.xaml.cs">
+      <DependentUpon>WallEnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intellisense\Commands\DikeEnd.xaml.cs">
+      <DependentUpon>DikeEnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intellisense\Commands\Wall.xaml.cs">
+      <DependentUpon>Wall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intellisense\Commands\Pitch.xaml.cs">
+      <DependentUpon>Pitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intellisense\Commands\FreeObj.xaml.cs">
+      <DependentUpon>FreeObj.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Intellisense\Commands\Curve.xaml.cs">
       <DependentUpon>Curve.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Intellisense\Commands\Dike.xaml.cs">
+      <DependentUpon>Dike.xaml</DependentUpon>
     </Compile>
     <Compile Include="Intellisense\Commands\RailStart.xaml.cs">
       <DependentUpon>RailStart.xaml</DependentUpon>
@@ -125,7 +143,31 @@
     <None Include="test.ook" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Intellisense\Commands\WallEnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intellisense\Commands\DikeEnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intellisense\Commands\Wall.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intellisense\Commands\Pitch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intellisense\Commands\FreeObj.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Intellisense\Commands\Curve.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Intellisense\Commands\Dike.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

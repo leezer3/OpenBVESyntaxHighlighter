@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="OpenBVESyntax.FreeObjControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <StackPanel Name="Description">
+        <TextBlock><Bold>Places a FreeObject as follows:</Bold></TextBlock>
+        <WrapPanel>
+            <TextBlock>.freeobj</TextBlock>
+            <TextBlock Foreground="Red"> RailIndex</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="Orange">FreeObjStructureIndex</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="YellowGreen">X</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="Blue">Y</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="MediumVioletRed">Yaw</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="DarkTurquoise">Pitch</TextBlock>
+            <TextBlock>;</TextBlock>
+            <TextBlock Foreground="Yellow">Roll</TextBlock>
+        </WrapPanel>
+        <TextBlock></TextBlock>
+        <WrapPanel>
+            <TextBlock Foreground="Red">RailIndex</TextBlock>
+            <TextBlock> RailIndex represents the rail on which the new object is to be placed</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="Orange">FreeObjStructureIndex</TextBlock>
+            <TextBlock> is a non-negative integer representing the FreeObject to be placed</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="YellowGreen">X</TextBlock>
+            <TextBlock> represents the horizontal position relative to the selected rail for the new FreeObject</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="Blue">Y</TextBlock>
+            <TextBlock> represents the vertical position relative to the selected rail for the new FreeObject</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="MediumVioletRed">Yaw</TextBlock>
+            <TextBlock> represents the angle in degrees by which the object is rotated in the XZ-plane in clock-wise order when viewed from above</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="DarkTurquoise">Pitch</TextBlock>
+            <TextBlock> represents the angle in degrees by which the object is rotated in the YZ-plane in clock-wise order when viewed from the left</TextBlock>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock Foreground="Yellow">Roll</TextBlock>
+            <TextBlock> represents the angle in degrees by which the object is rotated in the XY-plane in clock-wise order when viewed from behind</TextBlock>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>

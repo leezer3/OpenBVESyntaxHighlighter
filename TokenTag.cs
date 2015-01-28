@@ -51,7 +51,9 @@ namespace OpenBVESyntax
             _commandTypes[".curve"] = commandTypes.Curve;
             _commandTypes[".freeobj"] = commandTypes.FreeObject;
             _commandTypes[".wall"] = commandTypes.Wall;
+            _commandTypes[".wallend"] = commandTypes.WallEnd;
             _commandTypes[".dike"] = commandTypes.Dike;
+            _commandTypes[".dikeend"] = commandTypes.DikeEnd;
         }
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged

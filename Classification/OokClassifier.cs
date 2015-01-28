@@ -64,7 +64,9 @@ namespace OpenBVESyntax
             _ookTypes[commandTypes.Pitch] = typeService.GetClassificationType("pitch");
             _ookTypes[commandTypes.FreeObject] = typeService.GetClassificationType("freeobj");
             _ookTypes[commandTypes.Wall] = typeService.GetClassificationType("wall");
+            _ookTypes[commandTypes.WallEnd] = typeService.GetClassificationType("wallend");
             _ookTypes[commandTypes.Dike] = typeService.GetClassificationType("dike");
+            _ookTypes[commandTypes.DikeEnd] = typeService.GetClassificationType("dikeend");
         }
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged

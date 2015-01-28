@@ -160,6 +160,27 @@ namespace OpenBVESyntax
         }
     }
 
+    /// <summary>
+    /// Defines the editor highlighting for wall commands
+    /// </summary>
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = "WallEnd")]
+    [Name("WallEnd")]
+    //this should be visible to the end user
+    [UserVisible(false)]
+    //set the priority to be after the default classifiers
+    [Order(Before = Priority.Default)]
+    internal sealed class HLTWallEnd : ClassificationFormatDefinition
+    {
+        /// <summary>
+        /// Defines the visual format for the "ordinary" classification type
+        /// </summary>
+        public HLTWallEnd()
+        {
+            this.DisplayName = "WallEnd"; //human readable version of the name
+            this.ForegroundColor = Colors.LightBlue;
+        }
+    }
 
     /// <summary>
     /// Defines the editor highlighting for dike commands
@@ -179,6 +200,27 @@ namespace OpenBVESyntax
         public HLTDike()
         {
             this.DisplayName = "Dike"; //human readable version of the name
+            this.ForegroundColor = Colors.LightBlue;
+        }
+    }
+    /// <summary>
+    /// Defines the editor highlighting for dike commands
+    /// </summary>
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = "DikeEnd")]
+    [Name("DikeEnd")]
+    //this should be visible to the end user
+    [UserVisible(false)]
+    //set the priority to be after the default classifiers
+    [Order(Before = Priority.Default)]
+    internal sealed class HLTDikeEnd : ClassificationFormatDefinition
+    {
+        /// <summary>
+        /// Defines the visual format for the "ordinary" classification type
+        /// </summary>
+        public HLTDikeEnd()
+        {
+            this.DisplayName = "DikeEnd"; //human readable version of the name
             this.ForegroundColor = Colors.LightBlue;
         }
     }
